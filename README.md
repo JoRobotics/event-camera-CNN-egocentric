@@ -48,5 +48,22 @@ python build_dataset.py --data data --out cache_events --C 0.2
 python build_dataset.py --data data --out cache_frames --mode framediff
 run_all.bat
 ```
+## How to run (Linux Command Prompt)
+
+```
+# 1. Install the required Python packages
+pip install numpy opencv-python torch matplotlib
+
+# 2. Extract event data from your original recordings and clips
+python build_dataset.py --data data --out cache_events --C 0.2
+
+# 3. Compute frame differences for the video clips
+python build_dataset.py --data data --out cache_frames --mode framediff
+
+# 4. Make the execution script executable and run it
+chmod +x run_all.sh
+./run_all.sh
+```
+
 
 The video data is not included in this repository.
